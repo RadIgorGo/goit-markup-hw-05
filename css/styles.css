@@ -585,7 +585,6 @@ img {
   display: flex;
   height: 44px;
   width: 44px;
-
   border-radius: 50%;
 }
 .instagram-svg,
@@ -649,7 +648,6 @@ img {
   display: flex;
   width: 170px;
   height: 90px;
-
   border: 1px solid var(--svg-smoke);
   box-sizing: border-box;
   border-radius: 4px;
@@ -756,7 +754,7 @@ img {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-/* validation-done */
+
 .link-menu {
   display: block;
   position: relative;
@@ -815,13 +813,12 @@ img {
   position: absolute;
   z-index: 2;
   opacity: 0;
-  transition: transform var(--time-transition) var(--timing-function);
+  transition: var(--time-transition) var(--timing-function);
 }
 .product:hover .overlay {
   opacity: 1;
   transform: translateY(-100%);
 }
-
 .backdrop {
   position: fixed;
   top: 0;
@@ -834,6 +831,7 @@ img {
 .is-hidden {
   opacity: 0;
   pointer-events: none;
+  transition: var(--time-transition) var(--timing-function);
 }
 .is-hidden .modal {
   transform: translate(-50%, -50%) scale(0);
@@ -846,26 +844,19 @@ img {
   transform: translate(-50%, -50%);
   height: 581px;
   width: 528px;
-
   border-radius: 4px;
   background-color: var(--white);
   transform: translate(-50%, -50%) scale(1);
-  transition: transform var(--time-transition) var(--timing-function);
-  opacity: 1;
+  transition: var(--time-transition) var(--timing-function);
+/* animation-name: changeBgColor;
+  animation-duration: 3000ms; */
 }
-/* .modal-close {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  height: 30px;
-  width: 30px;
-  background-image: url(images\1.svg);
-} */
-
+}
 .modal button:hover,
 .modal button:focus {
   cursor: pointer;
   outline: none;
+  
 }
 .modal button {
   position: absolute;
@@ -876,11 +867,46 @@ img {
   width: 30px;
   border: none;
   border-radius: 50%;
-  background-color: lightcoral;
 }
-
 .close {
   position: absolute;
   top: 0px;
   left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+.link-menu,
+.link,
+.bt-main,
+.pos-social,
+.instagram-svg,
+.instagram-svg1,
+.twitter-svg,
+.twitter-svg1,
+.linkedin-svg,
+.linkedin-svg1,
+.unit-clients,
+.svg-client1,
+.svg-client2,
+.svg-client3,
+.svg-client4,
+.svg-client5,
+.svg-client6,
+.bt-works,
+.flex-element,
+.modal button {
+  transition: var(--time-transition) var(--timing-function);
+}
+@keyframes changeBgColor {
+  0% {
+    background-color: teal;
+  }
+
+  50% {
+    background-color: orange;
+  }
+
+  100% {
+    background-color: deepskyblue;
+  }
 }
