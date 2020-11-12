@@ -34,11 +34,12 @@
         <div class="bg-hero">
           <div class="container big-button">
         <h1 class="title">Эффективные решения для вашего бизнеса</h1>
-        <button class="bt-main">Заказать услугу</button>
+        <button class="bt-main" data-modal-open>Заказать услугу</button>
       </div>
       </div>
       
       <div class="container pearl-wall">
+        
         <div class="description-job">
             <div class="description-unit"><div class="bg-svg"><svg class="des-svg">
   <use href="./images/sprite.svg#antenna"></use>
@@ -290,5 +291,9 @@
         </div>
       </footer>
     </main>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal"><button data-modal-close></button></div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
