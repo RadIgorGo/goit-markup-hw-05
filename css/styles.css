@@ -862,23 +862,25 @@ img {
   background-image: url(images\1.svg);
 } */
 
-.modal-close:hover,
-.modal-close:focus {
+.modal button:hover,
+.modal button:focus {
   cursor: pointer;
+  outline: none;
 }
 .modal button {
   position: absolute;
-  right: 8px;
+  display: block;
   top: 8px;
+  right: 8px;
   height: 30px;
   width: 30px;
+  border: none;
   border-radius: 50%;
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: var(--white);
+  background-color: lightcoral;
 }
+
 .close {
-  height: 11px;
-  width: 11px;
-  background-color: #212121;
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
