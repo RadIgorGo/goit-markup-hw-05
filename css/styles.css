@@ -832,10 +832,10 @@ img {
   opacity: 0;
   pointer-events: none;
   transition: var(--time-transition) var(--timing-function);
+  animation-name: changeBgColor;
 }
 .is-hidden .modal {
   transform: translate(-50%, -50%) scale(0);
-  opacity: 0;
 }
 .modal {
   position: absolute;
@@ -846,17 +846,13 @@ img {
   width: 528px;
   border-radius: 4px;
   background-color: var(--white);
-  transform: translate(-50%, -50%) scale(1);
+
   transition: var(--time-transition) var(--timing-function);
-/* animation-name: changeBgColor;
-  animation-duration: 3000ms; */
 }
-}
+
 .modal button:hover,
 .modal button:focus {
   cursor: pointer;
-  outline: none;
-  
 }
 .modal button {
   position: absolute;
@@ -867,6 +863,7 @@ img {
   width: 30px;
   border: none;
   border-radius: 50%;
+  outline: none;
 }
 .close {
   position: absolute;
@@ -897,16 +894,24 @@ img {
 .modal button {
   transition: var(--time-transition) var(--timing-function);
 }
-@keyframes changeBgColor {
+.bt-main:hover {
+  animation-name: animate125;
+  animation-duration: 1000ms;
+  animation-timing-function: var(--timing-function);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes animate125 {
   0% {
-    background-color: teal;
+    transform: scale(1);
   }
 
   50% {
-    background-color: orange;
+    transform: scale(1.25);
   }
 
   100% {
-    background-color: deepskyblue;
+    transform: scale(1);
   }
 }
